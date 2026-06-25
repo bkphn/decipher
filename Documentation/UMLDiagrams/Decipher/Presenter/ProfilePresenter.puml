@@ -1,0 +1,11 @@
+@startuml
+class ProfilePresenter {
+    +  <<event>> ProfileReady : Action<string>? 
+    + ProfilePresenter(view:IProfileView, repository:IRepository)
+    - LoadProfiles() : void
+    - OnProfileSelected(sender:object?, e:EventArgs) : void
+    - OnProfileCreated(sender:object?, e:EventArgs) : void
+}
+ProfilePresenter --> "_view" IProfileView
+ProfilePresenter --> "_repository" IRepository
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+class MainView <<partial>> {
+    +  <<event>> stripMainClicked : EventHandler? 
+    +  <<event>> stripStatsClicked : EventHandler? 
+    +  <<event>> stripProfileClicked : EventHandler? 
+    + MainView()
+    + SetMainContent(view:UserControl) : void
+    + SetStatus(message:string) : void
+}
+class MenuColor {
+}
+Form <|-- MainView
+IMainView <|-- MainView
+MainView +-- MenuColor
+ProfessionalColorTable <|-- MenuColor
+MenuColor --> "MenuItemSelectedGradientBegin" Color
+MenuColor --> "MenuItemSelectedGradientEnd" Color
+MenuColor --> "MenuItemBorder" Color
+@enduml

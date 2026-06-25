@@ -1,0 +1,8 @@
+@startuml
+interface IAlphabetView {
+     <<event>> btnPlayClicked : EventHandler 
+    PopulateAlphabets(alphabets:Dictionary<int, string>) : void
+    GetSelectedAlphabets() : List<int>
+    ShowMessage(message:string) : void
+}
+@enduml

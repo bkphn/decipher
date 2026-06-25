@@ -1,0 +1,9 @@
+@startuml
+class StatsPresenter {
+    - <<readonly>> _userId : int
+    + StatsPresenter(view:IStatsView, repository:IRepository, userId:int)
+    - LoadData() : void
+}
+StatsPresenter --> "_view" IStatsView
+StatsPresenter --> "_repository" IRepository
+@enduml

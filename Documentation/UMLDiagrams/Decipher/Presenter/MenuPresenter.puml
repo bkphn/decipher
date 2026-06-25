@@ -1,0 +1,7 @@
+@startuml
+class MenuPresenter {
+    +  <<event>> GameModeSelected : Action<string>? 
+    + MenuPresenter(view:IMenuView)
+}
+MenuPresenter --> "_view" IMenuView
+@enduml

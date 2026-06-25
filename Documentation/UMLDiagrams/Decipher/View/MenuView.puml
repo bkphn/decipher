@@ -1,0 +1,9 @@
+@startuml
+class MenuView <<partial>> {
+    +  <<event>> btnLanguageClicked : EventHandler? 
+    +  <<event>> btnLetterClicked : EventHandler? 
+    + MenuView()
+}
+UserControl <|-- MenuView
+IMenuView <|-- MenuView
+@enduml

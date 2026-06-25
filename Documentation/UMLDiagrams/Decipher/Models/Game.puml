@@ -1,0 +1,10 @@
+@startuml
+class Game <<partial>> {
+    + Id : int <<get>> <<set>>
+    + UserId : int <<get>> <<set>>
+    + Score : int <<get>> <<set>>
+    + Languages : string <<get>> <<set>> = null
+}
+Game --> "PlayedTime" DateTime
+Game o-> "User" User
+@enduml

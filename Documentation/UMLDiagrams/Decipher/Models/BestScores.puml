@@ -1,0 +1,6 @@
+@startuml
+class BestScores {
+    + Alphabet : string <<get>> <<set>>
+    + Score : int <<get>> <<set>>
+}
+@enduml

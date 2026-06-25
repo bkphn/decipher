@@ -1,0 +1,13 @@
+@startuml
+class AlphabetView <<partial>> {
+    +  <<event>> btnPlayClicked : EventHandler? 
+    + AlphabetView()
+    + PopulateAlphabets(alphabets:Dictionary<int, string>) : void
+    + GetSelectedAlphabets() : List<int>
+    - OnSelectClicked(sender:object?, e:EventArgs) : void
+    - OnDeselectClicked(sender:object?, e:EventArgs) : void
+    + ShowMessage(message:string) : void
+}
+UserControl <|-- AlphabetView
+IAlphabetView <|-- AlphabetView
+@enduml

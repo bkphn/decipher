@@ -1,0 +1,13 @@
+@startuml
+class ProfileView <<partial>> {
+    +  <<event>> ProfileSelected : EventHandler? 
+    +  <<event>> btnProfileClicked : EventHandler? 
+    + ProfileView()
+    + PopulateProfiles(profiles:List<string>) : void
+    + GetSelectedProfile() : string
+    + GetNewProfile() : string
+    + ShowMessage(message:string) : void
+}
+UserControl <|-- ProfileView
+IProfileView <|-- ProfileView
+@enduml

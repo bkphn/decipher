@@ -13,6 +13,7 @@ namespace Decipher.View
         void SetGlyph(string glyph);
         void PopulateAnswers(List<string> answers);
 
+        void HighlightAnswers(string correctAnswer, string selectedAnswer);
         void UpdateScore(int score);
         void UpdateLives(int lives);
 

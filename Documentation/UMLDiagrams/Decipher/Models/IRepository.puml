@@ -1,0 +1,15 @@
+@startuml
+interface IRepository {
+    GetAvailableAlphabets() : Dictionary<int, string>
+    CreateNewPlayer(playerName:string) : void
+    GetAllPlayerNames() : List<string>
+    GetLettersByAlphabetIds(alphabetsIds:List<int>) : List<Letter>
+    GetAllLetters() : List<Letter>
+    GetUserIdByNickname(nickname:string) : int
+    SaveGameScore(userId:int, score:int, alphabetIds:List<int>) : void
+    RecordUserError(userId:int, letterId:int) : void
+    GetUserBestScores(userId:int) : List<BestScores>
+    GetUserBestLanguages(userId:int) : List<BestScores>
+    GetUserWeakestLetters(userId:int) : List<WeakestLetter>
+}
+@enduml

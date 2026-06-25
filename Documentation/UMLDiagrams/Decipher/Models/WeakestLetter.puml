@@ -1,0 +1,8 @@
+@startuml
+class WeakestLetter {
+    + Id : int <<get>> <<set>>
+    + Glyph : string <<get>> <<set>>
+    + LetterName : string <<get>> <<set>>
+    + ErrorCount : int <<get>> <<set>>
+}
+@enduml

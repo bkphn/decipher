@@ -1,0 +1,12 @@
+@startuml
+class Letter <<partial>> {
+    + Id : int <<get>> <<set>>
+    + Glyph : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + AlphabetId : int? <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+Letter --> "Alphabet" Alphabet
+Letter o-> "UserErrors<UserError>" "ICollection`1"
+@enduml

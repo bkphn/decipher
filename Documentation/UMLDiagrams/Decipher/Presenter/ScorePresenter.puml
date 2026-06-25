@@ -1,0 +1,9 @@
+@startuml
+class ScorePresenter {
+    +  <<event>> PlayAgainRequested : Action? 
+    +  <<event>> MainMenuRequested : Action? 
+    + ScorePresenter(view:IScoreView, repository:IRepository, userId:int, currentScore:int, alphabetIds:List<int>)
+}
+ScorePresenter --> "_view" IScoreView
+ScorePresenter --> "_repository" IRepository
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class QuizView <<partial>> {
+    # <<override>> Dispose(disposing:bool) : void
+    - InitializeComponent() : void
+}
+QuizView --> "labLetter" Label
+QuizView --> "tableAnswers" TableLayoutPanel
+QuizView --> "btnAnswer4" Button
+QuizView --> "btnAnswer3" Button
+QuizView --> "btnAnswer2" Button
+QuizView --> "btnAnswer1" Button
+QuizView --> "labScore" Label
+QuizView --> "labLives" Label
+@enduml

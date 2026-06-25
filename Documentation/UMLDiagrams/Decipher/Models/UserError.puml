@@ -1,0 +1,10 @@
+@startuml
+class UserError <<partial>> {
+    + UserId : int <<get>> <<set>>
+    + LetterId : int <<get>> <<set>>
+    + ErrorCount : int? <<get>> <<set>>
+}
+UserError --> "LastErrorTime" DateTime
+UserError o-> "Letter" Letter
+UserError o-> "User" User
+@enduml

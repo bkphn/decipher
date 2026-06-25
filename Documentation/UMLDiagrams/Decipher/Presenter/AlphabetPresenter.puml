@@ -1,0 +1,10 @@
+@startuml
+class AlphabetPresenter {
+    +  <<event>> GameStartRequested : Action<List<int>>? 
+    + AlphabetPresenter(view:AlphabetView, repository:IRepository)
+    - LoadAlphabets() : void
+    - OnPlayClicked(sender:object?, e:EventArgs) : void
+}
+AlphabetPresenter --> "_view" IAlphabetView
+AlphabetPresenter --> "_repository" IRepository
+@enduml

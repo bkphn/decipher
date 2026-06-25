@@ -1,0 +1,6 @@
+@startuml
+interface IMenuView {
+     <<event>> btnLanguageClicked : EventHandler 
+     <<event>> btnLetterClicked : EventHandler 
+}
+@enduml

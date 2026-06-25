@@ -1,0 +1,11 @@
+@startuml
+class User <<partial>> {
+    + Id : int <<get>> <<set>>
+    + Nickname : string <<get>> <<set>>
+}
+class "ICollection`1"<T> {
+}
+User --> "CreatedTime" DateTime
+User o-> "Games<Game>" "ICollection`1"
+User o-> "UserErrors<UserError>" "ICollection`1"
+@enduml

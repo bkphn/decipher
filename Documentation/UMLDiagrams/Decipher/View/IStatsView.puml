@@ -1,0 +1,6 @@
+@startuml
+interface IStatsView {
+    PopulateWeakestLetters(weakestLetters:List<WeakestLetter>) : void
+    PopulateBestScores(bestScores:List<BestScores>) : void
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class ProfileView <<partial>> {
+    # <<override>> Dispose(disposing:bool) : void
+    - InitializeComponent() : void
+}
+ProfileView --> "groupChoose" GroupBox
+ProfileView --> "groupCreate" GroupBox
+ProfileView --> "labNickname" Label
+ProfileView --> "txtNickname" TextBox
+ProfileView --> "btnProfile" Button
+ProfileView --> "listProfile" ListBox
+@enduml

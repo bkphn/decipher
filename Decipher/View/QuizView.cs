@@ -52,6 +52,9 @@ namespace Decipher.View
             {
                 _answerButtons[i].Text = answers[i];
                 _answerButtons[i].Visible = true;
+
+                _answerButtons[i].BackColor = System.Drawing.Color.FromArgb(75, 75, 75);
+                _answerButtons[i].UseVisualStyleBackColor = false;
             }
         }
 
@@ -64,6 +67,21 @@ namespace Decipher.View
         {
             labLives.Text = new string('❤', lives);
             labLives.ForeColor = System.Drawing.Color.FromArgb(88, 204, 2);
+        }
+
+        public void HighlightAnswers(string correctAnswer, string selectedAnswer)
+        {
+            foreach (var button in _answerButtons)
+            {
+                if (button.Text == correctAnswer)
+                {
+                    button.BackColor = System.Drawing.Color.FromArgb(147, 211, 51);
+                }
+                else if (button.Text == selectedAnswer && selectedAnswer != correctAnswer)
+                {
+                    button.BackColor = System.Drawing.Color.FromArgb(238, 85, 85);
+                }
+            }
         }
 
     }

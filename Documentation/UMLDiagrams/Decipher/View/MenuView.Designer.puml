@@ -1,0 +1,8 @@
+@startuml
+class MenuView <<partial>> {
+    # <<override>> Dispose(disposing:bool) : void
+    - InitializeComponent() : void
+}
+MenuView --> "btnLanguage" Button
+MenuView --> "btnLetter" Button
+@enduml

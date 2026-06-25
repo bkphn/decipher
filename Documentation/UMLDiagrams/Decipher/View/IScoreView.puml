@@ -1,0 +1,7 @@
+@startuml
+interface IScoreView {
+     <<event>> btnPlayAgainClicked : EventHandler 
+     <<event>> btnMainMenuClicked : EventHandler 
+    SetScores(currentScore:int, bestScore:int) : void
+}
+@enduml

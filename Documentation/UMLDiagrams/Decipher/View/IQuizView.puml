@@ -1,0 +1,9 @@
+@startuml
+interface IQuizView {
+     <<event>> btnAnswerClicked : EventHandler<string> 
+    SetGlyph(glyph:string) : void
+    PopulateAnswers(answers:List<string>) : void
+    UpdateScore(score:int) : void
+    UpdateLives(lives:int) : void
+}
+@enduml

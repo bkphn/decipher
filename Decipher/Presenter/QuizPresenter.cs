@@ -17,6 +17,7 @@ namespace Decipher.Presenter
         private readonly int _userId;
         private readonly string _gameMode;
 
+        private bool _isProcessingAnswer = false;
         private Letter _currentLetter;
         private string _correctAnswer;
         private int _score = 0;
@@ -68,8 +69,14 @@ namespace Decipher.Presenter
 
             _view.PopulateAnswers(finalOptions.OrderBy(x => _random.Next()).ToList());
         }
-        private void OnAnswerClicked(object? sender, string selectedAnswer)
+        private async void OnAnswerClicked(object? sender, string selectedAnswer)
         {
+
+            if (_isProcessingAnswer) return;
+            _isProcessingAnswer = true;
+
+            _view.HighlightAnswers(_correctAnswer, selectedAnswer);
+
             if (selectedAnswer == _correctAnswer)
             {
                 _score += 1;
@@ -82,9 +89,12 @@ namespace Decipher.Presenter
                 _repository.RecordUserError(_userId, _currentLetter.Id);
             }
 
+            await Task.Delay(1000);
+
             if (_lives > 0)
             {
                 LoadNext();
+                _isProcessingAnswer = false;
             }
             else
             {

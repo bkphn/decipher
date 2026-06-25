@@ -1,0 +1,10 @@
+@startuml
+class ScoreView <<partial>> {
+    +  <<event>> btnPlayAgainClicked : EventHandler? 
+    +  <<event>> btnMainMenuClicked : EventHandler? 
+    + ScoreView()
+    + SetScores(currentScore:int, bestScore:int) : void
+}
+UserControl <|-- ScoreView
+IScoreView <|-- ScoreView
+@enduml

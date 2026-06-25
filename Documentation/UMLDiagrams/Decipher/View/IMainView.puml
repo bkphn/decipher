@@ -1,0 +1,9 @@
+@startuml
+interface IMainView {
+     <<event>> stripMainClicked : EventHandler 
+     <<event>> stripStatsClicked : EventHandler 
+     <<event>> stripProfileClicked : EventHandler 
+    SetMainContent(content:UserControl) : void
+    SetStatus(message:string) : void
+}
+@enduml

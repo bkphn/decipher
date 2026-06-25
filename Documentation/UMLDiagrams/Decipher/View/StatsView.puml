@@ -1,0 +1,11 @@
+@startuml
+class StatsView <<partial>> {
+    + StatsView()
+    + PopulateBestScores(bestScores:List<BestScores>) : void
+    + PopulateWeakestLetters(weakestLetters:List<WeakestLetter>) : void
+    - StyleGrid(grid:DataGridView) : void
+    - labBestScores_Click(sender:object, e:EventArgs) : void
+}
+UserControl <|-- StatsView
+IStatsView <|-- StatsView
+@enduml

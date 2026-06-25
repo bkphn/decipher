@@ -1,0 +1,23 @@
+@startuml
+class QuizPresenter {
+    - <<readonly>> _userId : int
+    - <<readonly>> _gameMode : string
+    - _correctAnswer : string
+    - _score : int = 0
+    - _lives : int = 3
+    +  <<event>> QuizFinished : Action<int>? 
+    + QuizPresenter(view:IQuizView, repository:IRepository, letters:List<Letter>, alphabets:Dictionary<int, string>, userId:int, gameMode:string)
+    - LoadNext() : void
+    - OnAnswerClicked(sender:object?, selectedAnswer:string) : void
+}
+class "List`1"<T> {
+}
+class "Dictionary`2"<T1,T2> {
+}
+QuizPresenter --> "_view" IQuizView
+QuizPresenter --> "_repository" IRepository
+QuizPresenter --> "_letters<Letter>" "List`1"
+QuizPresenter --> "_alphabets<int,string>" "Dictionary`2"
+QuizPresenter --> "_currentLetter" Letter
+QuizPresenter o-> "_random" Random
+@enduml

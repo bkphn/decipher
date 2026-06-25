@@ -1,0 +1,10 @@
+@startuml
+interface IProfileView {
+     <<event>> ProfileSelected : EventHandler 
+     <<event>> btnProfileClicked : EventHandler 
+    PopulateProfiles(profiles:List<string>) : void
+    GetSelectedProfile() : string
+    GetNewProfile() : string
+    ShowMessage(message:string) : void
+}
+@enduml

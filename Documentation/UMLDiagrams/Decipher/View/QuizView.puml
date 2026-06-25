@@ -1,0 +1,13 @@
+@startuml
+class QuizView <<partial>> {
+    +  <<event>> btnAnswerClicked : EventHandler<string>? 
+    + QuizView()
+    - OnAnyAnswerClicked(sender:object?, e:EventArgs) : void
+    + SetGlyph(glyph:string) : void
+    + PopulateAnswers(answers:List<string>) : void
+    + UpdateScore(score:int) : void
+    + UpdateLives(lives:int) : void
+}
+UserControl <|-- QuizView
+IQuizView <|-- QuizView
+@enduml

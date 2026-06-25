@@ -1,0 +1,15 @@
+@startuml
+class MainPresenter {
+    - _currentUserId : int = 0
+    + MainPresenter(view:IMainView, repository:IRepository)
+    - ShowProfile() : void
+    + ShowMenu() : void
+    - ShowStats() : void
+    - ShowAlphabetSelection() : void
+    - StartQuiz(mode:string, selectedIds:List<int>) : void
+    - ShowScoreScreen(score:int, mode:string, selectedIds:List<int>?) : void
+    + ShowMessage(message:string) : void
+}
+MainPresenter --> "_view" IMainView
+MainPresenter --> "_repository" IRepository
+@enduml

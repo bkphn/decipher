@@ -1,0 +1,11 @@
+@startuml
+class StatsView <<partial>> {
+    # <<override>> Dispose(disposing:bool) : void
+    - InitializeComponent() : void
+}
+StatsView --> "groupStats" GroupBox
+StatsView --> "lblWeakestLetters" Label
+StatsView --> "gridWeakestLetters" DataGridView
+StatsView --> "labBestScores" Label
+StatsView --> "gridBestScores" DataGridView
+@enduml
