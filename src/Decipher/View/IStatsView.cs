@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Decipher.Models;
+using Decipher.src.Models;
 
-namespace Decipher.View
+namespace Decipher.src.View
 {
     internal interface IStatsView
     {

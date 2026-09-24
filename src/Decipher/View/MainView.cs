@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using Decipher.View;
+using Decipher.src.View;
 
 namespace Decipher
 {

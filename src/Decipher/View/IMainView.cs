@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Decipher.View
+namespace Decipher.src.View
 {
     internal interface IMainView
     {

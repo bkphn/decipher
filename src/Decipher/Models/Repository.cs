@@ -21,8 +21,8 @@ namespace Decipher.Models
             {
                 connection.Open();
 
-                string query = "SELECT Id, Name FROM alphabets;";
-
+                string query = "SELECT Id, Name FROM alphabets WHERE Id <> -1;";
+                
                 using (var command = new MySqlCommand(query, connection))
                 {
                     using (var reader = command.ExecuteReader())
